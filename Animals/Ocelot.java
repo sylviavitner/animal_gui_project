@@ -1,4 +1,4 @@
-package nature;
+package animals;
 
 public class Ocelot extends Feline{
     public Ocelot(String name){

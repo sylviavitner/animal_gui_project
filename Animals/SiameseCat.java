@@ -1,4 +1,4 @@
-package nature;
+package animals;
 
 public class SiameseCat extends HouseCat{
     public SiameseCat(String name){

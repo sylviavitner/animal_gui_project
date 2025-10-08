@@ -1,4 +1,4 @@
-package nature;
+package animals;
 
 public class HouseCat extends Feline implements Pet{
     public HouseCat(String name){
