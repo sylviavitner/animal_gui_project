@@ -35,10 +35,16 @@ public abstract class Animal {
     }
     public abstract void eat();
     public abstract void makeNoise();
+    public abstract void MovementBehavior();
+    public abstract void SoundBehavior();
+    public abstract void DietBehavior();
+    
+    
 
     
     
     
     
+
 
 }
