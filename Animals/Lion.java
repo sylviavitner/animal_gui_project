@@ -1,15 +1,21 @@
 package animals;
 
-public class Lion extends Feline{
+public abstract class Lion extends Animal{
     public Lion(String name){
         super(name);
     }
-    public void eat(){
-        System.out.println("rip with teeth...");
-        hungerLevel = hungerLevel - 2;
+    public void performEat()
+    {
+        System.out.println("Rip into the meal.");
     }
-    public void makeNoise(){
-        System.out.println("roar...");
+    public void performMove()
+    {
+         System.out.println("Slink around the tall gras...");
+    }
+    public void performSound()
+    {
+        System.out.println("A might roar...");
     }
 }
+
  
