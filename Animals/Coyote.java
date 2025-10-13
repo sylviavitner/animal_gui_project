@@ -1,15 +1,24 @@
 package animals;
 
-public class Coyote extends Canine{
-    public Coyote(String name){
+public abstract class Lizard extends Animal
+{
+    public Lizard (String name)
+    {
         super(name);
     }
-    public void makeNoise(){
-        System.out.println("howl...");
+  public void performMove()
+    {
+    System.out.println("Skittering around...");
     }
-    public void eat(){
-        System.out.println("gnaws...");
-        hungerLevel = hungerLevel - 2;
-    } 
+
+    public void performSound()
+    {
+    System.out.println("Sksksks...");
+    }
+    public void performEat()
+    {
+    System.out.println("Kills insect with tongue...");
+    }
 
 }
+
