@@ -1,6 +1,6 @@
 package animals;
 
-public class Snake extends Animal {
+public abstract class Snake extends Animal {
     public Snake (String name)
     {
         super(name);
@@ -21,5 +21,6 @@ public class Snake extends Animal {
     }
     
 }
+
 
 
