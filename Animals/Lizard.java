@@ -1,10 +1,14 @@
 package Animals;
 
-public abstract class Lizard extends Animal
+public abstract class Lizard extends Animal implements DietBehavior, MovementBehavior, SoundBehavior
 {
+    public static String[] buttonType = {"GilaMonster", "GreenIguana"}
     public Lizard (String name)
     {
-        super(name);
+        super(name, buttonType);
+    }
+    public Lizard (String name, String[] buttonType2) {
+        super(name, buttonType2); 
     }
   public void performMove()
     {
@@ -21,4 +25,5 @@ public abstract class Lizard extends Animal
     }
 
 }
+
 
