@@ -1,4 +1,4 @@
-package animals;
+package Animals;
 public interface SoundBehavior
   {
     public void roar();

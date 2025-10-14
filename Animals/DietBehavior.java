@@ -1,4 +1,4 @@
-package animals;
+package Animals;
 public interface DietBehavior
   {
     public void carnivore();

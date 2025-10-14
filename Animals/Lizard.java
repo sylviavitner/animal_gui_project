@@ -1,4 +1,4 @@
-package animals;
+package Animals;
 
 public abstract class Lizard extends Animal
 {

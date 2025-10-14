@@ -1,3 +1,5 @@
+
+import Animals.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -38,7 +40,7 @@ public class GUI {
         Image scaledImage = icon.getImage().getScaledInstance(60, 60, Image.SCALE_SMOOTH);
         icon = new ImageIcon(scaledImage);
         button.setIcon(icon);
-
+        //button press action creates a call to the loadAnimalWindow method
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 loadAnimalWindow(name);
@@ -51,7 +53,7 @@ public class GUI {
     public void setButtons() {
         animalButtonPanel = new JPanel(new GridLayout(2, 5, 10, 10));
         animalButtonPanel.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
-        
+        //using a for-each loop to create buttons for each animal
         for (String name : animalNames) {
             JButton button = createAnimalButton(name);
             animalButtonPanel.add(button);
@@ -60,10 +62,52 @@ public class GUI {
     }
 
     private void loadAnimalWindow(String name) {
-        JFrame animalFrame = new JFrame(name);
-        animalFrame.setSize(400, 400);
-        animalFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        animalFrame.setVisible(true);
+        switch (name) {
+            case "Butterfly":
+                    Butterfly butterfly = new Butterfly("butterfly") {};
+                break;
+            case "Chicken":
+                    Chicken chicken = new Chicken("chicken") {};
+                break;
+            case "Fish":
+                    Fish fish = new Fish("fish") {};
+                break;
+            case "Lion":
+                    Lion lion = new Lion("lion") {};
+                break;
+            case "Lizard":
+                    Lizard lizard = new Lizard("lizard") {};
+                break;
+            case "Monkey":
+                    Monkey monkey = new Monkey("monkey") {};
+                break;
+            case "Pig":
+                    Pig pig = new Pig("pig - not a cop") {};
+                break;
+            case "Snake":
+                    Snake snake = new Snake("snake") {};
+                break;
+            case "Turtle":
+                    Turtle turtle = new Turtle("turtle") {};
+                break;
+            case "Whale":
+                    Whale whale = new Whale("whale") {};
+                break;
+
+            default:
+                throw new AssertionError();
+        }
+
+        
+        
+
+
+
+
+        
+        
+
+
     }
 
     private void displayFrame() {

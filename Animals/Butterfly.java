@@ -1,10 +1,12 @@
-package animals;
+package Animals;
 
 public abstract class Butterfly extends Animal {
+    String animalType1 = "Monarch";
+    String animalType2 = "Swallowtail";
     public Butterfly(String name){
         super(name);
     }
-public void performEat()
+    public void performEat()
     {
         System.out.println("Drinking milkweed...");
     }
@@ -17,6 +19,9 @@ public void performEat()
     {
         System.out.println("Wsp wsp wsp...");
     }
+
+
+    
 }
 
  

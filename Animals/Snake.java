@@ -1,4 +1,4 @@
-package animals;
+package Animals;
 
 public abstract class Snake extends Animal {
     public Snake (String name)
