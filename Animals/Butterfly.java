@@ -21,16 +21,6 @@ public abstract class Butterfly extends Animal {
         displayFrame();
 
     }
-    // public void performMove()
-    // {
-    //     System.out.println("Flap flap flap...");
-    // }
-
-    // public void performSound()
-    // {
-    //     System.out.println("Wsp wsp wsp...");
-    // }
-
     public void loadAnimalWindow(String name) {
         //create a new instance of the AnimalWindow class
         switch(name) {
