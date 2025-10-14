@@ -13,23 +13,24 @@ import javax.swing.*;
 public abstract class Animal {
 
     protected String name; 
-    private JFrame frame2;
+    public JFrame frame2;
     private JPanel animalButtonPanel;    
     private static final int X_LOC = 100;
     private static final int Y_LOC = 100;
-    String animalType1;
-    String animalType2;
+    protected String[] animalType = new String[2];
 
     public Animal(String name){
         this.name = name;
-        // JFrame animalFrame = new JFrame(name);
-        // animalFrame.setSize(400, 400);
-        // animalFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        // animalFrame.setVisible(true);
         createFrame();
         setButtons();
         displayFrame();
-
+    }
+    public Animal (String name, String[] animalType){
+        this.name = name;
+        this.animalType = animalType;
+        createFrame();
+        setButtons();
+        displayFrame();
     }
     public void createFrame() {
         frame2 = new JFrame();
@@ -44,12 +45,10 @@ public abstract class Animal {
         animalButtonPanel = new JPanel(new GridLayout(2, 5, 10, 10));
         animalButtonPanel.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
         //using a for-each loop to create buttons for each animal
-
-        JButton button = createAnimalButton(animalType1);
-        animalButtonPanel.add(button);
-        JButton button2 = createAnimalButton(animalType2);
-        animalButtonPanel.add(button2);
-        
+        for (String animal : animalType) {
+            JButton button = createAnimalButton(animal);
+            animalButtonPanel.add(button);
+        }
         frame2.add(animalButtonPanel, BorderLayout.CENTER);
     }
 
@@ -63,14 +62,15 @@ public abstract class Animal {
         //button press action creates a call to the loadAnimalWindow method
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // loadAnimalWindow(name);
+                loadAnimalWindow(name);
             }
         });
 
         return button;
     }
+    public abstract void loadAnimalWindow(String name);
 
-    private void displayFrame() {
+    public void displayFrame() {
         frame2.pack();
         frame2.setVisible(true);
     }
@@ -93,8 +93,8 @@ public abstract class Animal {
 
 
 
-    public abstract void performMove();
-    public abstract void performSound();
-    public abstract void performEat();
+    // public abstract void performMove();
+    // public abstract void performSound();
+    // public abstract void performEat();
 }
 
