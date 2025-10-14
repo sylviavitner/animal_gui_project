@@ -1,9 +1,9 @@
 package Animals.subanimals;
 
-public class Monarch extends Animals.Butterfly{
+public class Barracuda extends Animals.Fish{
     private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
-    private static String[] actions = {"ps ps ps...", "Drinking Thistle...", "flap flap flap...",};
-    public Monarch(String name){
+    private static String[] actions = {"Dun dun dun du...", "chomp...", "Races in the water..."};
+    public Barracuda (String name){
         super(name,buttonType);
     }
 	
@@ -20,7 +20,7 @@ public class Monarch extends Animals.Butterfly{
                 perform(actions[2]);
                 break;
             case "WIKIPEDIAAAAAAAA":
-                String url = "https://en.wikipedia.org/wiki/Swallowtail_butterfly";
+                String url = "https://en.wikipedia.org/wiki/Barracuda";
                 try {
                     java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
                 } catch (java.io.IOException e) {
@@ -28,7 +28,7 @@ public class Monarch extends Animals.Butterfly{
                 }
                 break;
             default:
-                System.out.println("Unknown butterfly type: " + name);
+                System.out.println("Unknown fish type: " + name);
                 break;
         }
     }
