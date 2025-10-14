@@ -1,7 +1,5 @@
 public class Main {
     public static void main(String[] args) {
         GUI gui = new GUI();
-        System.out.print("testing");
-        // is this symbiotic?
     }
 }
