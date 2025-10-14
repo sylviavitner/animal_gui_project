@@ -1,7 +1,6 @@
 package Animals;
 
-public abstract class Butterfly extends Animal implements DietBehavior, MovementBehavior, SoundBehavior 
-{
+public abstract class Butterfly extends Animal
     String animalType1 = "Monarch";
     String animalType2 = "Swallowtail";
     public Butterfly(String name){
@@ -26,4 +25,5 @@ public abstract class Butterfly extends Animal implements DietBehavior, Movement
 }
 
  
+
 
