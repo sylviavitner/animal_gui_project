@@ -36,12 +36,15 @@ public abstract class Fish extends Animal {
         frame2.add(label);
     }
     
-    public class Barracuda extends Animals.Fish{
+    public class Barracuda extends Animals.Fish
+    {
         private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
         private static String[] actions = {"Dun dun dun du...", "chomp...", "Races in the water..."};
-        public Barracuda (String name){
+        public Barracuda (String name)
+        {
             super(name,buttonType);
         }
+    }
         
         public void loadAnimalWindow(String name) {
             //create a new instance of the AnimalWindow class
@@ -69,4 +72,5 @@ public abstract class Fish extends Animal {
             }
         }
     }
+
 }
