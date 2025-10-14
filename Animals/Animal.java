@@ -1,14 +1,9 @@
 package Animals; 
 
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
-
-
 
 public abstract class Animal {
 
@@ -75,10 +70,6 @@ public abstract class Animal {
         frame2.setVisible(true);
     }
 
-
-
-    
-    
     public String getName(){
         return this.name;
     }
@@ -86,15 +77,5 @@ public abstract class Animal {
     public void setName(String name){
         this.name = name;
     }
-    
-
-
-
-
-
-
-    // public abstract void performMove();
-    // public abstract void performSound();
-    // public abstract void performEat();
 }
 
