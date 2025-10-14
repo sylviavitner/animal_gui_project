@@ -93,8 +93,8 @@ public abstract class Animal {
 
 
 
-    public abstract void performMove();
-    public abstract void performSound();
-    public abstract void performEat();
+    // public abstract void performMove();
+    // public abstract void performSound();
+    // public abstract void performEat();
 }
 

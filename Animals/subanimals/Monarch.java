@@ -2,6 +2,7 @@ package Animals.subanimals;
 
 public class Monarch extends Animals.Butterfly{
     private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
+    private static String[] actions = {"Flap flap flap...","Wsp wsp wsp...","Drinking milkweed..."};
     public Monarch(String name){
         super(name,buttonType);
     }
@@ -10,13 +11,13 @@ public class Monarch extends Animals.Butterfly{
         //create a new instance of the AnimalWindow class
         switch(name) {
             case "Sound":
-                performSound();
+                perform(actions[0]);
                 break;
             case "Eat":
-                performEat();
+                perform(actions[2]);
                 break;
             case "Move":
-                performMove();
+                perform(actions[1]);
                 break;
             case "WIKIPEDIAAAAAAAA":
                 String url = "https://en.wikipedia.org/wiki/Monarch_butterfly";
