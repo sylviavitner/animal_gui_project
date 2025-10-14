@@ -1,12 +1,12 @@
 package animals;
 
-public abstract class Monkey extends animal
+public abstract class Monkey extends Animal
 {
     public Monkey(String name){
         super(name);
     }
     public void performEat(){
-        System.out.println("aahhhh".");
+        System.out.println("aahhhh");
     }
     public void performSound(){
         System.out.println("ooh aah...");

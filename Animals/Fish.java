@@ -1,7 +1,7 @@
 package animals;
 
-public abstract class fish extends Animal{
-    public fish(String name){
+public abstract class Fish extends Animal{
+    public Fish(String name){
         super(name);
     }
     public void performEat(){

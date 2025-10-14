@@ -44,15 +44,14 @@ public class Habitat {
         System.out.println(longitude);
         System.out.println(getNumOfAnimals());
         for (Animal animal : animals) {
-            animal.sleep();
-            animal.makeNoise();
-            animal.eat();
-            animal.roam();
-            if (animal instanceof Pet) {
+            animal.performEat();
+            animal.performSound();
+            animal.performMove();
+            /**if (animal instanceof Pet) {     No pet class anymore
                 ((Pet)animal).play();
                 ((Pet)animal).beFriendly();
                 
-            }
+            }**/
         }
         
     }

@@ -12,7 +12,7 @@ public abstract class Snake extends Animal {
     }
     public void performSound()
     {
-        System.out.println("Hissss"...);
+        System.out.println("Hissss...");
     }
 
     public void performEat()

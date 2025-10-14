@@ -1,6 +1,6 @@
 package animals;
 
-public abstract class Turtle extends animal{
+public abstract class Turtle extends Animal{
     public Turtle (String name){
         super(name);
     }

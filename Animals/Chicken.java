@@ -11,7 +11,7 @@ public abstract class Chicken extends Animal {
     }
    public void performSound()
     {
-        System.out.println("Bawk!"...);
+        System.out.println("Bawk!");
     }
     public void performMove(){
         System.out.println("Hops...");
