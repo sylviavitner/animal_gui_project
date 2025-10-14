@@ -3,7 +3,7 @@ public class SilkieChicken extends Animals.Chicken
 {
   private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
   private static String[] actions = {"SCREECH!..." "Tsk tsk tsk...", "Ruffles Feathers..."};
-  public Leghorn(String name)
+  public SilkieChicken(String name)
   {
     super(name, buttonType);
   }
