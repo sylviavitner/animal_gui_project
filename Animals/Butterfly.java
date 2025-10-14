@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 import Animals.subanimals.Monarch;
 import Animals.subanimals.Swallowtail;
 
-public abstract class Butterfly extends Animal implements DietBehavior, MovementBehavior, SoundBehavior {
+public abstract class Butterfly extends Animal {
     static String[] buttonType = {"Monarch","Swallowtail"};
     public Butterfly(String name){
         super(name,buttonType);
