@@ -21,7 +21,7 @@ public abstract class Lizard extends Animal {
     public void loadAnimalWindow(String name) {
         //create a new instance of the AnimalWindow class
         switch(name) {
-            case "GilaMonster":
+            case "GillaMonster":
                 new GilaMonster(name);
                 break;
             case "GreenIguana":
@@ -43,7 +43,7 @@ public abstract class Lizard extends Animal {
         }
         public void loadAnimalWindow(String name) {
             switch (name) {
-                case "sound":
+                case "Sound":
                     perform(actions[0]);
                     break;
                 case "Eat":
@@ -75,7 +75,7 @@ public abstract class Lizard extends Animal {
         }
         public void loadAnimalWindow(String name) {
             switch (name) {
-                case "sound":
+                case "Sound":
                     perform(actions[0]);
                     break;
                 case "Eat":

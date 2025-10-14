@@ -4,7 +4,7 @@ import javax.swing.JLabel;
 
 
 public abstract class Lion extends Animal {
-    static String[] buttonType = {"Lion","Scar"};
+    static String[] buttonType = {"Mufasa","Scar"};
     public Lion(String name){
         super(name,buttonType);
     }

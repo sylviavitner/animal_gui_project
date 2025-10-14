@@ -21,10 +21,10 @@ public abstract class Turtle extends Animal {
     public void loadAnimalWindow(String name) {
         //create a new instance of the AnimalWindow class
         switch(name) {
-            case "Snapping":
+            case "Snapping Turtle":
                 new Snapping(name);
                 break;
-            case "Box":
+            case "Box Turtle":
                 new Box(name);
             default:
                 System.out.println("Unknown Turtle type: " + name);
@@ -44,7 +44,7 @@ public abstract class Turtle extends Animal {
         }
         public void loadAnimalWindow(String name) {
             switch (name) {
-                case "sound":
+                case "Sound":
                     perform(actions[0]);
                     break;
                 case "Eat":
@@ -76,7 +76,7 @@ public abstract class Turtle extends Animal {
         }
         public void loadAnimalWindow(String name) {
             switch (name) {
-                case "sound":
+                case "Sound":
                     perform(actions[0]);
                     break;
                 case "Eat":

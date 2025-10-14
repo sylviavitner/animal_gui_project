@@ -44,7 +44,7 @@ public abstract class Monkey extends Animal {
         }
         public void loadAnimalWindow(String name) {
             switch (name) {
-                case "sound":
+                case "Sound":
                     perform(actions[0]);
                     break;
                 case "Eat":
@@ -76,7 +76,7 @@ public abstract class Monkey extends Animal {
         }
         public void loadAnimalWindow(String name) {
             switch (name) {
-                case "sound":
+                case "Sound":
                     perform(actions[0]);
                     break;
                 case "Eat":
