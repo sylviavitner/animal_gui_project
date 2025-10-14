@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 
 
 public abstract class Lizard extends Animal {
-    static String[] buttonType = {"GillaMonster","Swallowtail"};
+    static String[] buttonType = {"GillaMonster","GreenIguana"};
     public Lizard(String name){
         super(name,buttonType);
     }
@@ -24,8 +24,8 @@ public abstract class Lizard extends Animal {
             case "GilaMonster":
                 new GilaMonster(name);
                 break;
-            case "Swallowtail":
-                new Swallowtail(name);
+            case "GreenIguana":
+                new GreenIguana(name);
             default:
                 System.out.println("Unknown Lizard type: " + name);
                 break;
@@ -67,18 +67,15 @@ public abstract class Lizard extends Animal {
         }
     }
 
-
-    public class Barracuda extends Animals.Fish{
+    public class GreenIguana extends Animals.Lizard{
         private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
-        private static String[] actions = {"Dun dun dun du...", "chomp...", "Races in the water..."};
-        public Barracuda (String name){
-            super(name,buttonType);
+        private static String[] actions = {"Grrrrr...","Nom nom nom...","Slither slither..."};
+        public GreenIguana(String name) {
+            super(name, buttonType);
         }
-        
         public void loadAnimalWindow(String name) {
-            //create a new instance of the AnimalWindow class
-            switch(name) {
-                case "Sound":
+            switch (name) {
+                case "sound":
                     perform(actions[0]);
                     break;
                 case "Eat":
@@ -88,7 +85,7 @@ public abstract class Lizard extends Animal {
                     perform(actions[2]);
                     break;
                 case "WIKIPEDIAAAAAAAA":
-                    String url = "https://en.wikipedia.org/wiki/Barracuda";
+                    String url = "https://en.wikipedia.org/wiki/Green_iguana";
                     try {
                         java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
                     } catch (java.io.IOException e) {
@@ -96,10 +93,12 @@ public abstract class Lizard extends Animal {
                     }
                     break;
                 default:
-                    System.out.println("Unknown fish type: " + name);
+                    System.out.println("Unknown lizard type: " + name);
                     break;
             }
         }
     }
+
+
     
 }
