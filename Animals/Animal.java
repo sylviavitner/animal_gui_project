@@ -17,8 +17,7 @@ public abstract class Animal {
     private JPanel animalButtonPanel;    
     private static final int X_LOC = 100;
     private static final int Y_LOC = 100;
-    String animalType1;
-    String animalType2;
+    protected String[] animalType = {"1","2"};
 
     public Animal(String name){
         this.name = name;
@@ -29,7 +28,13 @@ public abstract class Animal {
         createFrame();
         setButtons();
         displayFrame();
-
+    }
+    public Animal (String name, String[] animalType){
+        this.name = name;
+        this.animalType = animalType;
+        createFrame();
+        setButtons();
+        displayFrame();
     }
     public void createFrame() {
         frame2 = new JFrame();
@@ -44,12 +49,10 @@ public abstract class Animal {
         animalButtonPanel = new JPanel(new GridLayout(2, 5, 10, 10));
         animalButtonPanel.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
         //using a for-each loop to create buttons for each animal
-
-        JButton button = createAnimalButton(animalType1);
-        animalButtonPanel.add(button);
-        JButton button2 = createAnimalButton(animalType2);
-        animalButtonPanel.add(button2);
-        
+        for (String animal : animalType) {
+            JButton button = createAnimalButton(animal);
+            animalButtonPanel.add(button);
+        }
         frame2.add(animalButtonPanel, BorderLayout.CENTER);
     }
 
@@ -63,12 +66,13 @@ public abstract class Animal {
         //button press action creates a call to the loadAnimalWindow method
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // loadAnimalWindow(name);
+                loadAnimalWindow(name);
             }
         });
 
         return button;
     }
+    public abstract void loadAnimalWindow(String name);
 
     private void displayFrame() {
         frame2.pack();
