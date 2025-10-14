@@ -1,41 +1,52 @@
 package Animals;
 
+import javax.swing.JLabel;
+
 import Animals.subanimals.Monarch;
 import Animals.subanimals.Swallowtail;
 
 public abstract class Butterfly extends Animal {
     // String animalType1 = "Monarch";
     // String animalType2 = "Swallowtail";
-    String[] animalType = {"Monarch","Swallowtail"};
+    static String[] buttonType = {"Monarch","Swallowtail"};
     public Butterfly(String name){
-        super(name);
+        super(name,buttonType);
     }
-    public void performEat()
-    {
-        System.out.println("Drinking milkweed...");
+    public Butterfly(String name,String[] buttonType){
+        super(name,buttonType);
     }
-    public void performMove()
-    {
-        System.out.println("Flap flap flap...");
-    }
+    public void perform(String action){
+        createFrame();
+        printToFrame(action);
+        displayFrame();
 
-    public void performSound()
-    {
-        System.out.println("Wsp wsp wsp...");
     }
+    // public void performMove()
+    // {
+    //     System.out.println("Flap flap flap...");
+    // }
+
+    // public void performSound()
+    // {
+    //     System.out.println("Wsp wsp wsp...");
+    // }
 
     public void loadAnimalWindow(String name) {
         //create a new instance of the AnimalWindow class
         switch(name) {
-            case "1":
+            case "Monarch":
                 new Monarch(name);
                 break;
-            case "2":
+            case "Swallowtail":
                 new Swallowtail(name);
             default:
                 System.out.println("Unknown butterfly type: " + name);
                 break;
         }
+    }
+    private void printToFrame(String action){
+        JLabel label = new JLabel(action);
+        frame2.add(label);
     }
     
 }

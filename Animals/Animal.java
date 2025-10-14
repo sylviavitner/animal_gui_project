@@ -13,18 +13,14 @@ import javax.swing.*;
 public abstract class Animal {
 
     protected String name; 
-    private JFrame frame2;
+    public JFrame frame2;
     private JPanel animalButtonPanel;    
     private static final int X_LOC = 100;
     private static final int Y_LOC = 100;
-    protected String[] animalType = {"1","2"};
+    protected String[] animalType = new String[2];
 
     public Animal(String name){
         this.name = name;
-        // JFrame animalFrame = new JFrame(name);
-        // animalFrame.setSize(400, 400);
-        // animalFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        // animalFrame.setVisible(true);
         createFrame();
         setButtons();
         displayFrame();
@@ -74,7 +70,7 @@ public abstract class Animal {
     }
     public abstract void loadAnimalWindow(String name);
 
-    private void displayFrame() {
+    public void displayFrame() {
         frame2.pack();
         frame2.setVisible(true);
     }
