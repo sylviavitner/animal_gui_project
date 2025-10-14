@@ -2,12 +2,12 @@ package Animals.subanimals;
 public class SilkieChicken extends Animals.Chicken
 {
   private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
-  private static String[] actions = {"SCREECH!..." "Tsk tsk tsk...", "Ruffles Feathers..."};
+  private static String[] actions = {"SCREECH!..." ,"Tsk tsk tsk...", "Ruffles Feathers..."};
   public SilkieChicken(String name)
   {
     super(name, buttonType);
   }
-  public void loadanimalWindow(String name)
+  public void loadAnimalWindow(String name)
   {
     switch(name)
       {

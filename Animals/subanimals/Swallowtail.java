@@ -1,9 +1,9 @@
 package Animals.subanimals;
 
-public class Monarch extends Animals.Butterfly{
+public class Swallowtail extends Animals.Butterfly{
     private static String[] buttonType = {"Sound","Eat", "Move", "WIKIPEDIAAAAAAAA"};
     private static String[] actions = {"ps ps ps...", "Drinking Thistle...", "flap flap flap...",};
-    public Monarch(String name){
+    public Swallowtail(String name){
         super(name,buttonType);
     }
 	
@@ -32,3 +32,4 @@ public class Monarch extends Animals.Butterfly{
                 break;
         }
     }
+}

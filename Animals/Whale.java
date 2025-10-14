@@ -1,23 +1,39 @@
 package Animals;
 
+import javax.swing.JLabel;
+
+
+
 public abstract class Whale extends Animal {
-    public Whale(String name)
-    {
-        super(name);
+    static String[] buttonType = {"Monarch","Swallowtail"};
+    public Whale(String name){
+        super(name,buttonType);
     }
-    public void performMove()
-    {
-        System.out.println("Swimming...");
+    public Whale(String name,String[] buttonType){
+        super(name,buttonType);
     }
-    public void performSound()
-    {
-        System.out.println("Awoo...");
+    public void perform(String action){
+        createFrame();
+        printToFrame(action);
+        displayFrame();
+
     }
-    public void performEat()
-    {
-        System.out.println("Eating plankton...");
+    public void loadAnimalWindow(String name) {
+        //create a new instance of the AnimalWindow class
+        switch(name) {
+            case "Monarch":
+                new Monarch(name);
+                break;
+            case "Swallowtail":
+                new Swallowtail(name);
+            default:
+                System.out.println("Unknown Whale type: " + name);
+                break;
+        }
+    }
+    private void printToFrame(String action){
+        JLabel label = new JLabel(action);
+        frame2.add(label);
     }
     
 }
-
- 

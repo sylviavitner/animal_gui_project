@@ -1,22 +1,39 @@
 package Animals;
 
-public abstract class Turtle extends Animal{
-    public Turtle (String name){
-        super(name);
-    }
-   public void performMove()
-    {
-        System.out.println("Slow crawl...");
-    }
+import javax.swing.JLabel;
 
-    public void performSound()
-    {
-        System.out.println("Creakkk...");
-    }
 
-    public void performEat()
-    {
-        System.out.println("Slowly chews lettuce...");
-    }
-} 
 
+public abstract class Turtle extends Animal {
+    static String[] buttonType = {"Monarch","Swallowtail"};
+    public Turtle(String name){
+        super(name,buttonType);
+    }
+    public Turtle(String name,String[] buttonType){
+        super(name,buttonType);
+    }
+    public void perform(String action){
+        createFrame();
+        printToFrame(action);
+        displayFrame();
+
+    }
+    public void loadAnimalWindow(String name) {
+        //create a new instance of the AnimalWindow class
+        switch(name) {
+            case "Monarch":
+                new Monarch(name);
+                break;
+            case "Swallowtail":
+                new Swallowtail(name);
+            default:
+                System.out.println("Unknown Turtle type: " + name);
+                break;
+        }
+    }
+    private void printToFrame(String action){
+        JLabel label = new JLabel(action);
+        frame2.add(label);
+    }
+    
+}

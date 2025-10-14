@@ -1,18 +1,39 @@
 package Animals;
 
-public abstract class Fish extends Animal{
-    public Fish(String name){
-        super(name);
-    }
-    public void performEat(){
-        System.out.println("glub glub...");
-    }
-    public void performSound(){
-        System.out.println("blub...");
-    }
-    public void performMove(){
-        System.out.println("wsh...");
-    }
-     
-}
+import javax.swing.JLabel;
 
+
+
+public abstract class Fish extends Animal {
+    static String[] buttonType = {"Monarch","Swallowtail"};
+    public Fish(String name){
+        super(name,buttonType);
+    }
+    public Fish(String name,String[] buttonType){
+        super(name,buttonType);
+    }
+    public void perform(String action){
+        createFrame();
+        printToFrame(action);
+        displayFrame();
+
+    }
+    public void loadAnimalWindow(String name) {
+        //create a new instance of the AnimalWindow class
+        switch(name) {
+            case "Monarch":
+                new Monarch(name);
+                break;
+            case "Swallowtail":
+                new Swallowtail(name);
+            default:
+                System.out.println("Unknown Fish type: " + name);
+                break;
+        }
+    }
+    private void printToFrame(String action){
+        JLabel label = new JLabel(action);
+        frame2.add(label);
+    }
+    
+}
