@@ -42,11 +42,11 @@ The application includes the following 10 main animal categories:
     - Beluga Whale
 
 ## Compiler instruction
-    # Navigate to the project root directory
+# Navigate to the project root directory
         - cd animal_gui_project
 
-    # Compile all Java files recursively
+# Compile all Java files recursively
         - javac -d bin src/**/*.java src/*.java
 
-    # Run the application
+# Run the application
         - java -cp bin Main
