@@ -45,7 +45,7 @@ The application includes the following 10 main animal categories:
 # Navigate to the project root directory
         - cd animal_gui_project
 
-# Compile all Java files recursively
+# Compile all Java files
         - javac -d bin src/**/*.java src/*.java
 
 # Run the application
