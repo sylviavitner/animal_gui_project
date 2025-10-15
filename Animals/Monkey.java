@@ -27,7 +27,7 @@ public abstract class Monkey extends Animal {
             case "Macaques":
                 new Macaques(name);
             default:
-                System.out.println("Unknown butterfly type: " + name);
+                System.out.println("Unknown Monkey type: " + name);
                 break;
         }
     }
